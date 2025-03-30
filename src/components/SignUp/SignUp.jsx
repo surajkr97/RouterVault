@@ -19,7 +19,7 @@ const SignUp = () => {
             <div className="flex items-center lg:order-2">
               <Link
                 to="/login"
-                className="hidden sm:block text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                className="text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
               >
                 Log In
               </Link>
@@ -28,12 +28,6 @@ const SignUp = () => {
                 className="hidden sm:block text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
               >
                 Get started
-              </Link>
-              <Link
-                to="/contact"
-                className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none block sm:hidden"
-              >
-                <TiThMenu />
               </Link>
             </div>
           </div>
@@ -93,12 +87,14 @@ const SignUp = () => {
               >
                 Sign Up
               </button>
+              <p className="mt-2 text-gray-600">Already have an account? <span className="text-blue-700 underline cursor-pointer">Login</span></p>
             </form>
+            
           </div>
         </div>
       </div>
 
-      <div className="w-[90vw] mx-auto">
+      <div className="w-[90vw] mx-auto pb-4">
       <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
               <div className="sm:flex sm:items-center sm:justify-between">
                 <span className="text-sm text-gray-500 sm:text-center">

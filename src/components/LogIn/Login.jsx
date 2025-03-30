@@ -25,15 +25,9 @@ const LogIn = () => {
               </Link>
               <Link
                 to="/signup"
-                className="hidden sm:block text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
               >
                 Get started
-              </Link>
-              <Link
-                to="/contact"
-                className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none block sm:hidden"
-              >
-                <TiThMenu />
               </Link>
             </div>
           </div>
@@ -62,13 +56,13 @@ const LogIn = () => {
               </div>
 
               <div className="flex flex-col mt-2">
-                <label for="tel" className="hidden">
+                <label for="password" className="hidden">
                   Number
                 </label>
                 <input
-                  type="tel"
-                  name="tel"
-                  id="tel"
+                  type="password"
+                  name="password"
+                  id="password"
                   placeholder="Password"
                   className="w-full mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
                 />
@@ -80,12 +74,13 @@ const LogIn = () => {
               >
                 Log In
               </button>
+              <p className="mt-2 text-gray-600">Don't have an account? <span className="text-blue-700 underline cursor-pointer">Signup</span></p>
             </form>
           </div>
         </div>
       </div>
 
-      <div className="w-[90vw] mx-auto">
+      <div className="w-[90vw] mx-auto pb-4">
             <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
                     <div className="sm:flex sm:items-center sm:justify-between">
                       <span className="text-sm text-gray-500 sm:text-center">
