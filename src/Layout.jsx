@@ -5,7 +5,7 @@ import Footer from "./components/Footer/Footer";
 
 function Layout() {
   const location = useLocation();
-  const hideFooterRoutes = ["/signup", "/login"];
+  const hideFooterRoutes = ["/","/signup", "/login"];
 
   return (
     <>

@@ -10,12 +10,14 @@ import User from './components/User/User'
 import Github, { githubInfoLoader } from './components/Github/Github'
 import SignUp from './components/SignUp/SignUp'
 import LogIn from './components/LogIn/Login'
+import Hero from './components/Hero/Hero'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
-      <Route path='/signup' element={<SignUp/>}/>
-      <Route path='/login' element={<LogIn/>}/>
+      <Route path='' element={<Hero/>}/> 
+      <Route path='signup' element={<SignUp/>}/>
+      <Route path='login' element={<LogIn/>}/>
       <Route path='home' element={<Home/>}/>
       <Route path ='about' element={<About/>}/>
       <Route path = 'contact' element={<Contact/>}/>
