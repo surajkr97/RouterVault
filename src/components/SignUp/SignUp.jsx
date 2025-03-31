@@ -1,12 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import signup from "../../assets/Images/signup.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const userDetail = {
+    name: "",
+    email: "",
+    password: "",
+  };
 
-  const handleSubmit = (e) =>{
-    console.log(e.target.value)
-  }
+  const [data, setdata] = useState(userDetail);
+  const navigate = useNavigate();
+
+  const handleInput = (e) => {
+    // console.log(e.target.name);
+    // console.log(e.target.value);
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setdata({ ...data, [name]: value });
+  };
+  // console.log(data);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (data.name == "" || data.email == "" || data.password == "") {
+      alert("Please Enter Your Detail");
+    } else {
+      const getData = JSON.parse(localStorage.getItem("user")) || [];
+      let arr = [];
+      arr = [...getData];
+      arr.push(data);
+
+      localStorage.setItem("user", JSON.stringify(arr));
+      alert("Sucessfully Signed In");
+      navigate("/login");
+    }
+  };
 
   return (
     <>
@@ -45,13 +76,16 @@ const SignUp = () => {
               <img src={signup} alt="SignUp Img" />
             </div>
 
-            <form className="p-6 flex flex-col justify-center">
+            <form
+              onSubmit={handleSubmit}
+              className="p-6 flex flex-col justify-center"
+            >
               <div className="flex flex-col">
                 <label htmlFor="name" className="hidden">
                   Full Name
                 </label>
                 <input
-                  onChange={handleSubmit}
+                  onChange={handleInput}
                   type="name"
                   name="name"
                   id="name"
@@ -65,7 +99,7 @@ const SignUp = () => {
                   Email
                 </label>
                 <input
-                  onChange={handleSubmit}
+                  onChange={handleInput}
                   type="email"
                   name="email"
                   id="email"
@@ -79,7 +113,7 @@ const SignUp = () => {
                   Number
                 </label>
                 <input
-                  onChange={handleSubmit}
+                  onChange={handleInput}
                   type="password"
                   name="password"
                   id="password"
@@ -89,7 +123,6 @@ const SignUp = () => {
               </div>
 
               <button
-                onChange={handleSubmit}
                 type="submit"
                 className="w-full bg-orange-700 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-orange-600 transition ease-in-out duration-300"
               >
