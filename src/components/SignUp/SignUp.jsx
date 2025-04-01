@@ -40,8 +40,8 @@ const SignUp = () => {
   };
 
   return (
-    <>
-      <header className="shadow sticky z-50 top-0">
+    <div className="md:h-screen flex flex-col ">
+      <header className="shadow sticky z-50 top-0 flex-none">
         <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <Link to="/" className="flex items-center cursor-pointer">
@@ -69,7 +69,7 @@ const SignUp = () => {
         </nav>
       </header>
 
-      <div className="flex items-top justify-center min-h-110 items-center">
+      <div className="flex flex-1 col-g justify-center min-h-110 items-center">
         <div className="max-w-6xl mx-auto p-6">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="h-70 w-70 mt-3">
@@ -86,7 +86,7 @@ const SignUp = () => {
                 </label>
                 <input
                   onChange={handleInput}
-                  type="name"
+                  type="text"
                   name="name"
                   id="name"
                   placeholder="Full Name"
@@ -141,7 +141,7 @@ const SignUp = () => {
         </div>
       </div>
 
-      <div className="w-[90vw] mx-auto pb-6">
+      <div className="w-[90vw] mx-auto pb-6 flex-none">
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center">
@@ -231,7 +231,7 @@ const SignUp = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

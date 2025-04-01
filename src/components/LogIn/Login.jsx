@@ -40,8 +40,8 @@ const LogIn = () => {
   };
 
   return (
-    <>
-      <header className="shadow sticky z-50 top-0">
+    <div className="md:h-screen flex flex-col">
+      <header className="shadow sticky z-50 top-0 flex-none">
         <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <Link to="/" className="flex items-center cursor-pointer">
@@ -69,7 +69,7 @@ const LogIn = () => {
         </nav>
       </header>
 
-      <div className="relative flex items-top justify-center min-h-110 sm:items-center sm:pt-0">
+      <div className="relative flex flex-1 items-top justify-center min-h-110 sm:items-center sm:pt-0">
         <div className="max-w-6xl mx-auto p-6">
           <p className="flex justify-center rounded-md p-2 text-xl text-red-500">
             {message}
@@ -130,7 +130,7 @@ const LogIn = () => {
         </div>
       </div>
 
-      <div className="w-[90vw] mx-auto pb-6">
+      <div className="w-[90vw] mx-auto pb-6 flex-none">
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center">
@@ -220,7 +220,7 @@ const LogIn = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
