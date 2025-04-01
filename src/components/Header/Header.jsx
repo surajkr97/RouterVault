@@ -23,23 +23,10 @@ export default function Header() {
                     </Link>
                     <div className="flex items-center lg:order-2">
                         <Link
-                            onClick={logout}
                             to="/signup"
-                            className="hidden sm:block text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                            className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
                         >
                             Log Out
-                        </Link>
-                        <Link
-                            to="/home"
-                            className="hidden sm:block text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
-                        >
-                            Get started
-                        </Link>
-                        <Link
-                            to="/contact"
-                            className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none block sm:hidden"
-                        >
-                            <TiThMenu />
                         </Link>
                     </div>
                     <div

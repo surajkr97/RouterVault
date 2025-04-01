@@ -1,5 +1,6 @@
 // import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
 
 const Github = () => {
   const data = useLoaderData();
@@ -20,8 +21,8 @@ const Github = () => {
   //   }, []);
 
   return (
-    <div className="bg-orange-50 py-20">
-      <h1 className="flex mx-auto justify-center text-2xl bg-gray-600 text-white rounded-lg w-fit px-4 py-2 mb-6">🟢 Live Github Data</h1>
+    <div className="lg:p-22 px-3 py-12">
+      <h1 className="flex mx-auto justify-center text-2xl bg-gray-600 text-white rounded-lg w-fit px-4 py-2 mb-6"><FaGithub className="h-7 w-7"/>&nbsp; Live Github Data</h1>
       <div className="flex mx-auto justify-center p-4 gap-6">
         <img
           className="max-w-37 h-full rounded-xl"

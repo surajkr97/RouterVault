@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <Link to="/" className="flex items-center">
+            <Link to="/home" className="flex items-center">
               <img
                 src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
                 className="mr-3 h-16"
@@ -77,22 +77,17 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
-                  <a
-                    href="https://github.com/surajkr97"
-                    className="hover:underline"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                <Link to="#" className="hover:underline">
                     Github
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <Link to="/" className="hover:underline">
+                  <Link to="#" className="hover:underline">
                     Discord
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link to="/" className="hover:underline">
+                  <Link to="#" className="hover:underline">
                     Linkedin
                   </Link>
                 </li>
