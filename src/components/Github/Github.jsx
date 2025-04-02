@@ -22,7 +22,10 @@ const Github = () => {
 
   return (
     <div className="lg:p-22 px-3 py-12">
-      <h1 className="flex mx-auto justify-center text-2xl bg-gray-600 text-white rounded-lg w-fit px-4 py-2 mb-6"><FaGithub className="h-7 w-7"/>&nbsp; Live Github Data</h1>
+      <h1 className="flex mx-auto justify-center text-2xl bg-gray-600 text-white rounded-lg w-fit px-4 py-2 mb-6">
+        <FaGithub className="h-7 w-7" />
+        &nbsp; Live Github Data
+      </h1>
       <div className="flex mx-auto justify-center p-4 gap-6">
         <img
           className="max-w-37 h-full rounded-xl"
@@ -45,6 +48,8 @@ const Github = () => {
 export default Github;
 
 export const githubInfoLoader = async () => {
-  let response = await fetch("https://api.github.com/users/surajkr97");
+  const githubUserName = JSON.parse(localStorage.getItem("inputUserName"));
+
+  let response = await fetch(`https://api.github.com/users/${githubUserName}`);
   return response.json();
 };

@@ -30,10 +30,12 @@ const LogIn = () => {
     if (!userEmail.trim() || !userPassword.trim()) {
       setMessage("*Please Enter Your Details*");
     } else {
-      getDetails.map((curVal) => {
+      getDetails.find((curVal) => {
         console.log(curVal);
 
-        if (curVal.email == userEmail && curVal.password == userPassword) {
+        if (curVal.email === userEmail && curVal.password === userPassword) {
+          localStorage.setItem("inputUserName", JSON.stringify(curVal.name));
+
           alert("Login Sucessfull!");
           navigate("/home");
         } else {
