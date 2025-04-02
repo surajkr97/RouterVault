@@ -27,16 +27,20 @@ const LogIn = () => {
     let getDetails = JSON.parse(localStorage.getItem("user"));
     console.log(getDetails);
 
-    getDetails.map((curVal) => {
-      console.log(curVal);
+    if (!userEmail.trim() || !userPassword.trim()) {
+      setMessage("*Please Enter Your Details*");
+    } else {
+      getDetails.map((curVal) => {
+        console.log(curVal);
 
-      if (curVal.email == userEmail && curVal.password == userPassword) {
-        alert("Login Sucessfull!");
-        navigate("/home");
-      } else {
-        setMessage("*Invalid Login Credential*");
-      }
-    });
+        if (curVal.email == userEmail && curVal.password == userPassword) {
+          alert("Login Sucessfull!");
+          navigate("/home");
+        } else {
+          setMessage("*Invalid Login Credential*");
+        }
+      });
+    }
   };
 
   return (
